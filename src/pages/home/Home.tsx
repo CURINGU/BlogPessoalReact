@@ -1,7 +1,7 @@
 function Home() {
     return (
         <>
-            <div className="bg-[#FFFDF2] flex justify-center">
+            <div className="bg-[#fff5ea] flex justify-center">
                 <div className='container grid grid-cols-2 text-black'>
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
                         <h2 className='text-5xl font-bold'>
@@ -12,7 +12,7 @@ function Home() {
                         </p>
 
                         <div className="flex justify-around gap-4">
-                            <div className='rounded text-black 
+                            <div className='rounded text-white font-bold bg-black
                                             border-black border-solid border-2 py-2 px-4'
                                 >
                                 Nova Postagem

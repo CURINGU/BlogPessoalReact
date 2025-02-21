@@ -1,12 +1,17 @@
-import { FacebookLogo, GithubLogo, InstagramLogo, LinkedinLogo, XLogo } from '@phosphor-icons/react'
-import { TwitterLogo } from '@phosphor-icons/react/dist/ssr'
+import { GithubLogo, LinkedinLogo, XLogo } from '@phosphor-icons/react'
+import { ReactNode, useContext } from 'react'
+import { AuthContext } from '../../contexts/AuthContext'
 
 function Footer() {
 
     let data = new Date().getFullYear()
 
-    return (
-        <>
+    const { usuario } = useContext(AuthContext)
+
+    let component: ReactNode
+
+    if (usuario.token !== "") {
+        component = (
             <div className="flex justify-center bg-[#fff5ea] text-black">
                 <div className="container flex flex-col items-center py-4">
                     <p className='text-xl font-bold'>
@@ -20,6 +25,11 @@ function Footer() {
                     </div>
                 </div>
             </div>
+        )
+    }
+    return (
+        <>
+            { component }
         </>
     )
 }
